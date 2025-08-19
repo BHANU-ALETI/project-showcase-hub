@@ -5,9 +5,12 @@ services:
     env: node
     rootDir: server
     plan: free
+    runtime: node
     buildCommand: "npm install"
     startCommand: "npm start"
     envVars:
+      - key: NODE_VERSION
+        value: "20"
       - key: MONGO_URI
         sync: false
       - key: JWT_SECRET
@@ -18,9 +21,11 @@ services:
     name: project-hub-ui
     env: static
     rootDir: client
-    buildCommand: "npm install && ng build"
-    publishDir: dist/client/browser
+    buildCommand: "npm install && ng build --configuration=production"
+    publishDir: dist/client
     envVars:
+      - key: NODE_VERSION
+        value: "20"
       - key: NG_APP_API_URL
         fromService:
           type: web
