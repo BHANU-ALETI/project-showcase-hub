@@ -1,5 +1,3 @@
-# render.yaml - Placed in the root of your repository
-
 services:
   # Backend API Service
   - type: web
@@ -11,9 +9,9 @@ services:
     startCommand: "npm start"
     envVars:
       - key: MONGO_URI
-        sync: false # Set this in the Render dashboard
+        sync: false
       - key: JWT_SECRET
-        sync: false # Set this in the Render dashboard
+        sync: false
 
   # Frontend Static Site
   - type: static_site
@@ -27,7 +25,7 @@ services:
         fromService:
           type: web
           name: project-hub-api
-          property: url # Automatically gets the backend URL
+          property: url
     routes:
       - type: rewrite
         source: /*
