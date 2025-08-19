@@ -16,7 +16,7 @@ services:
         sync: false # Set this in the Render dashboard
 
   # Frontend Static Site
-  - type: static
+  - type: static_site
     name: project-hub-ui
     env: static
     rootDir: client
