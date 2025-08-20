@@ -1,0 +1,24 @@
+@use 'app/styles/forms';
+/* client/src/styles.scss */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa; /* A very light grey for a softer look */
+  color: #212529; /* A softer black */
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+  font-weight: 700; /* Bolder headings */
+}
+
+a {
+  color: #0a66c2; /* A professional blue */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #004182;
+}
