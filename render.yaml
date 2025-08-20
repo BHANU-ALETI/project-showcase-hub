@@ -17,12 +17,12 @@ services:
         sync: false
 
   # Frontend Static Site
-  - type: static_site
+  - type: static
     name: project-hub-ui
     env: static
     rootDir: client
-    buildCommand: "npm install && ng build --configuration=production"
-    publishDir: dist/client
+    buildCommand: "cd client && npm install && ng build --configuration=production"
+    publishDir: client/dist/client
     envVars:
       - key: NODE_VERSION
         value: "20"
